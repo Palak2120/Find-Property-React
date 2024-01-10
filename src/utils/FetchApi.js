@@ -17,4 +17,3 @@ export const fetchApi = async(url) => {
         console.log("error in fetching : " , error);
     }
 }
-

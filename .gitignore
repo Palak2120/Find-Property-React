@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/src/utils/AgencyList.js
+/src/utils/Data.js
+/src/utils/FetchApi.js
