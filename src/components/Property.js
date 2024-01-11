@@ -1,18 +1,12 @@
 import React from "react";
-import { Typography, Box, Card, CardActionArea, CardMedia, CardContent, Stack, Divider, Avatar } from "@mui/material"
-import VerifiedIcon from '@mui/icons-material/Verified';
+import { Typography, Box, Card, CardActionArea, CardMedia, CardContent, Stack, Avatar } from "@mui/material"
 import millify from 'millify';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { styled } from '@mui/material/styles';
-import IconButton from '@mui/material/IconButton';
 import PlaceIcon from '@mui/icons-material/Place';
 import CallIcon from '@mui/icons-material/Call';
 import BedOutlinedIcon from '@mui/icons-material/BedOutlined';
 import BathtubOutlinedIcon from '@mui/icons-material/BathtubOutlined';
 import SellOutlinedIcon from '@mui/icons-material/SellOutlined';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
-import Title from "./Title";
 
 const Property = ({ property }) => {
     return (

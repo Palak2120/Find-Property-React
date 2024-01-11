@@ -1,4 +1,3 @@
-import { useTheme } from "@emotion/react";
 import { Typography } from "@mui/material";
 import React from "react";
 
@@ -7,23 +6,23 @@ const Title = ({ variant = "h6", sx = {}, children, ...props }) => {
     typeof variant !== "object"
       ? variant
       : variant.xl ||
-        variant.lg ||
-        variant.md ||
-        variant.sm ||
-        variant.xs ||
-        "h6";
+      variant.lg ||
+      variant.md ||
+      variant.sm ||
+      variant.xs ||
+      "h6";
 
   const _variantStyles =
     typeof variant !== "object"
       ? variant
       : {
-          xs: variant.xs,
-          sm: variant.sm || variant.xs,
-          md: variant.md || variant.sm || variant.xs,
-          lg: variant.lg || variant.md || variant.sm || variant.xs,
-          xl:
-            variant.xl || variant.lg || variant.md || variant.sm || variant.xs,
-        };
+        xs: variant.xs,
+        sm: variant.sm || variant.xs,
+        md: variant.md || variant.sm || variant.xs,
+        lg: variant.lg || variant.md || variant.sm || variant.xs,
+        xl:
+          variant.xl || variant.lg || variant.md || variant.sm || variant.xs,
+      };
 
   return (
     <Typography

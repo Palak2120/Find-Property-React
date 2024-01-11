@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import ClearIcon from '@mui/icons-material/Clear';
 import { baseUrl, fetchApi } from "../utils/FetchApi";
 
-const Search = ({ setFilteredProperties, explorePurpose, setIsLoading}) => {
+const Search = ({ setFilteredProperties, explorePurpose, setIsLoading }) => {
     const [query, setQuery] = useState({
         purpose: `${explorePurpose}`,
         rentFrequency: '',
@@ -32,9 +32,9 @@ const Search = ({ setFilteredProperties, explorePurpose, setIsLoading}) => {
         const locationExternalIDs = query.locationExternalIDs || '5002';
         const categoryExternalID = query.categoryExternalID || '4';
 
-           fetchApi(`${baseUrl}/properties/list?locationExternalIDs=${locationExternalIDs}&purpose=${purpose}&categoryExternalID=${categoryExternalID}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}&priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}`)
-           .then((data) => setFilteredProperties(data.hits))
-           .then(()=>setIsLoading(false));
+        fetchApi(`${baseUrl}/properties/list?locationExternalIDs=${locationExternalIDs}&purpose=${purpose}&categoryExternalID=${categoryExternalID}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}&priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}`)
+            .then((data) => setFilteredProperties(data.hits))
+            .then(() => setIsLoading(false));
     }
 
     const clearFilters = () => {
